@@ -36,8 +36,12 @@
         },
         methods:{
             addTask(){
-                axios.post('./api/task',{title:this.title});
-                alert('Adding Task');
+                axios.post('./api/task',{
+                    title:this.title
+                
+                });
+                Event.$emit('taskCreated');
+                //alert('Adding Task');
             }
             
         }
